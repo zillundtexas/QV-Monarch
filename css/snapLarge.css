@@ -1,0 +1,238 @@
+/*  ==================================================================================================== */
+/*  START LARGE DEVICES, WIDES SCREENS (MIN-WIDTH:993PX)  ============================================== */
+/*  ==================================================================================================== */
+
+
+		/*  ============================================================================================ */
+		/*  GENERIC STYLES  ============================================================================ */
+		/*  ============================================================================================ */
+		
+		html		{ font-size:62.5% } /* Sets the base font size of the page to 10px */
+		body		{ font-family:'Open Sans', 'Helvetica Neue', helvetica, helve, sans-serif; color:rgba(0,0,0,.87); line-height:1.4; background:#f9f9f9; }
+		body		{ border-top:2rem solid red; }
+		a 			{ color:#039be5; text-decoration:none; }
+		a:hover 	{ opacity:0.8; cursor:pointer; }
+		h1 			{ font-size:2rem; }
+		h2 			{ font-size:2.4rem; font-weight:300; }
+		input		{ font-family: 'Open Sans', 'Helvetica Neue', helvetica, helve, sans-serif; }
+		
+
+		/*  ============================================================================================ */
+		/*  BASE STYLES  =============================================================================== */
+		/*  ============================================================================================ */
+
+		.righty	{ float:right; }
+		.lefty	{ float:left; }
+		
+		.pageWrapper 	{ margin:0 auto;  width:100%; overflow:auto; min-height:50rem}
+		.headerWrapper	{ color:#fff; background-color: #00a7f7; padding:3.6rem 4.2rem 6rem; border-top: 2.4rem solid #0288d1; }
+		.contentWrapper	{ padding:2.4rem; }
+		.resultsWrapper	{ background-color:#fff; padding:0.8rem 2.4rem 0.8rem; margin:0 auto; box-shadow: 0 1px 2px 1px rgba(0,0,0,.2); max-width:144rem; }
+		
+		
+		/*  ============================================================================================ */
+		/*  ICON STYLES  =============================================================================== */
+		/*  ============================================================================================ */
+		
+		.toolbar { font-size:0;	}
+		
+		.toolbar .icon { font-size:1rem; }
+		
+		.icon { 
+			display: inline-block; 
+			margin:1.6rem 1.2rem 1.6rem;
+		}
+		
+		.icon:last-child { margin-right:0;}
+		
+		
+		/*  ============================================================================================ */
+		/*  BOX-CONTENT :BORDER-BOX ELEMENTS  ========================================================== */
+		/*  ============================================================================================ */
+
+		input,
+		.resultsRow,
+		.simpleSearch,
+		.searchbarWrapper,
+		select,
+		.sortRow { 
+			box-sizing:border-box;
+		}
+		
+		
+		/*  ============================================================================================ */
+		/*  PROPERTY SEARCH BAR STYLES  ================================================================ */
+		/*  ============================================================================================ */
+		
+		.searchbarWrapper { 
+			background-color:#fff;
+			padding: 0.4rem 2.1rem 0.4rem 4.2rem;
+			box-shadow: 0 0 2px rgba(0,0,0,.2);
+			height:6.2rem;
+		}
+		
+		.taSelect,
+		.simpleSearch {
+			display:inline-block;
+			vertical-align:text-bottom;
+		}
+		
+		.taSelect { 
+			position:relative;
+			margin-right:0.8rem; 
+		}
+		
+		.taSelect > i { 
+			position:absolute;
+			top:calc(50% - 1.2rem);
+			right:0.8rem;
+			pointer-events:none;
+		}
+		
+		.taSelect + span i { pointer-events:none; }
+		
+		.searchbarWrapper .icon:last-child i { 
+    		margin-top: -1rem;
+    		vertical-align: top; 
+		}
+		
+		.simpleSearch { width:calc(100% - 16rem); }
+		
+		.searchbarWrapper input {
+			font-size: 1.8rem;
+			font-weight:400;
+			color: #434343;
+			padding: 0.8rem 0;
+			border:none;
+			width:100%;
+			height:3.2rem;
+		}
+		
+		.searchbarWrapper select {
+			font-size:1.5rem;
+			font-weight:400;
+			background:none;
+			border:none;
+			border-right:1px solid rgba(0,0,0,0.12);
+			border-radius:0;
+			width:6rem;
+			height:3.2rem;
+			-webkit-appearance: none;
+		}
+		
+		.searchbarWrapper input:focus,
+		.searchbarWrapper select:focus {
+    		outline: 0;
+    		box-shadow: none;
+		}
+		
+		
+		/*  ============================================================================================ */
+		/*  PROPERTY SEARCH RESULTS ROWS  ============================================================== */
+		/*  ============================================================================================ */
+		
+		.resultsTitle { margin-bottom:1.6rem; overflow:auto; }
+		
+		.resultsTitle h1 { margin-top:1.6rem; }
+				
+		.resultsRow { 
+			display:table;
+			padding:0 2.4rem 0 0.8rem;
+			margin:0 -2.4rem;
+			border-bottom:1px solid #f2f2f2;
+			height:7.2rem;
+			width:calc(100% + 4.8rem);
+		}
+		
+		.resultsRow:last-child { border-bottom:initial; }
+		
+		.sortRow { 
+			display:table;
+			box-shadow:none;
+			padding-right:0;
+			border-bottom:none;
+			margin:0 0 0 -2.4rem;
+			height:4rem;
+			width:calc(100% + 2.4rem);
+		}
+		
+		.colHeader {
+			display:table-cell;
+			font-size:1.1rem;
+			text-align:right;
+			vertical-align:middle;
+			width:11.5%;
+		}
+		
+		.colHeader:first-child { 
+			text-align:left;
+			width:19.5%;
+		}
+		
+		.colHeader:first-child.active { 
+			text-align:left;
+			width:19.5%;
+		}
+		
+		.colHeader > .icon { display:none; }
+		
+		.colHeader.active > .icon { 
+			display:inline-block;
+    		vertical-align: middle;
+		}
+		
+		.colHeader a { 
+			font-weight:600;
+			color:rgba(0,0,0,0.54); 
+		}
+		
+		.colHeader.active a { 
+			color:rgba(0,0,0,1); 
+		}
+		
+		.colHeader a:hover { color:rgba(0,0,0,1); }
+		
+		.colCell {
+			display:table-cell;
+			font-size:1.2rem;
+			text-align:right;
+			vertical-align:middle;
+			width:11.5%;
+		}
+		
+		.colCell:first-child { 
+			text-align:left;
+			width:19.5%;
+		}
+		
+		.primaryPhoto_thumb {
+			background-color:rgba(0,0,0,0.30);
+			margin-right:0.8rem;
+			width:5.5rem;
+			height:5.5rem;
+			vertical-align:middle;
+		}
+		
+		.primaryPhoto_thumb + span {
+			display:inline-block;
+			font-weight:600;
+			width: calc(100% - 6.7rem);
+    		vertical-align: middle;
+		}
+		
+		@media only screen and (max-width:900px) {
+			
+			.colCell { font-size:1.1rem; }
+		
+		}
+		
+		
+/*  ==================================================================================================== */
+/*  END LARGE DEVICES, WIDES SCREENS (MIN-WIDTH:993PX)  ================================================ */
+/*  ==================================================================================================== */
+
+
+
+
+
+
