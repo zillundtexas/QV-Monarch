@@ -9,56 +9,29 @@
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); cursor:initial; }
 
-.material-icons.md-dark:hover,
-.material-icons.md-dark.md-inactive:hover,
-.material-icons.md-light:hover { color: rgba(0, 0, 0, 1); }
+.icon > .material-icons.md-dark:hover,
+.icon > .material-icons.md-dark.md-inactive:hover,
+.icon > .material-icons.md-light:hover { color: rgba(0, 0, 0, 1); }
 
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
+/*  ============================================================================================ */
+/*  ICON ANIMATION STYLES  ===================================================================== */
+/*  ============================================================================================ */
 
-
-.fa-arrow-down {
-  transform: rotate(0deg);
-  transition: transform .1s linear;
+.sorter {
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
 }
 
-.fa-arrow-down.open {
-  transform: rotate(180deg);
-  transition: transform .1s linear;
+.sorter.down{
+    -ms-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
 }
 
-(function(document) {
-  var div = document.getElementById('container');
-  var icon = document.getElementById('icon');
-  var open = false;
-  
-  div.addEventListener('click', function(){
-    if(open){
-      icon.className = 'fa fa-arrow-down';  
-    } else{
-      icon.className = 'fa fa-arrow-down open';
-    }
-    
-    open = !open;
-  });
-})(document);
-
-
-
-  <head>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-  </head>
-
-  <body>
-    <div id="container">
-      <i id="icon" class="fa fa-arrow-down"></i>
-    </div>
-    <script src="script.js"></script>
-  </body>
-
-</html>

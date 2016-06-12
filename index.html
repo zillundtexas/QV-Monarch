@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="css/snapSmall.css" media="all"/>
 	<link rel="stylesheet" type="text/css" href="css/snapXSmall.css" media="all"/>
 	<link rel="stylesheet" type="text/css" href="css/snapCustom.css" media="all"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
 
@@ -26,21 +27,23 @@
 			<h2>Monarch</h2>
 		</div>
 		<div class="searchbarWrapper">
-			<div class="taSelect">
-				<select>
-					<option>21</option>
-					<option>22</option>
-					<option>23</option>
-					<option>24</option>
-					<option>25</option>
-				</select>
-				<i class="material-icons md-dark ">arrow_drop_down</i></li>
-			</div>
-			<span class="icon"><i class="material-icons md-dark">search</i></span>
-			<div class="simpleSearch">
-				<input id="" class="" name="" type="text" value="" placeholder="Search" autocapitalize="off" autocomplete="off" autocorrect="off">
-			</div>
-			<span class="icon"><i class="material-icons md-dark md-inactive md-18">close</i></span>
+			<form>
+				<div class="taSelect">
+					<select>
+						<option>21</option>
+						<option>22</option>
+						<option>23</option>
+						<option>24</option>
+						<option>25</option>
+					</select>
+					<i class="material-icons md-dark ">arrow_drop_down</i></li>
+				</div>
+				<span class="icon"><i class="material-icons md-dark">search</i></span>
+				<div class="simpleSearch">
+					<input id="" class="search-box" name="" type="text" value="" placeholder="Search" autocapitalize="off" autocomplete="off" autocorrect="off" required>
+					<button class="close-icon material-icons md-dark md-inactive md-18"" type="reset">close</button>
+				</div>
+			</form>
 		</div>
 		
 		<div class="contentWrapper">
@@ -48,14 +51,14 @@
 				<div class="resultsTitle">
 					<h1 class="lefty" >Valuation Assessment Search Results</h1>
 						<ul class="toolbar righty">
-						<li class="icon"><i class="material-icons md-dark">date_range</i></li>
-						<li class="icon"><i class="material-icons md-dark">save</i></li>
-						<li class="icon"><i class="material-icons md-dark">more_vert</i></li>
+						<li class="icon ripple"><i class="material-icons md-dark">date_range</i></li>
+						<li class="icon ripple"><i class="material-icons md-dark">save</i></li>
+						<li class="icon ripple"><i class="material-icons md-dark">more_vert</i></li>
 					</ul>
 				</div>
 				<div class="resultsRow sortRow">
-					<div class="colHeader active"><span class="icon"><i class="material-icons md-18">arrow_downward</i></span><a href="#">Address</a></div>
-					<div class="colHeader"><span class="icon"></span><a href="#">Valuation ref</a></div>
+					<div class="colHeader active"><span class="icon"><i class="sorter material-icons md-18">arrow_downward</i></span><a href="#">Address</a></div>
+					<div class="colHeader"><span class="icon"></span><a href="#">Reference</a></div>
 					<div class="colHeader"><span class="icon"></span><a href="#">Capital val</a></div>
 					<div class="colHeader"><span class="icon"></span><a href="#">Land val</a></div>
 					<div class="colHeader"><span class="icon"></span><a href="#">TFA</a></div>
@@ -128,10 +131,219 @@
 					<div class="colCell">0.0611</div>
 					<div class="colCell">RD193B</div>
 				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
+				<div class="resultsRow">
+					<div class="colCell">
+						<img class="primaryPhoto_thumb" src="#">
+						<span>5 jackson Street 5</span>
+					</div>
+					<div class="colCell">17040-1400</div>
+					<div class="colCell">$530,000</div>
+					<div class="colCell">$295,000</div>
+					<div class="colCell">93</div>
+					<div class="colCell">90</div>
+					<div class="colCell">0.0611</div>
+					<div class="colCell">RD193B</div>
+				</div>
 			</div>
 		
 		</div>
 	</div>
+	<script src="js/monarch.js"></script>
 
 </body>
 </html>

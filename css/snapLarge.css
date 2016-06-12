@@ -27,7 +27,7 @@
 		.pageWrapper 	{ margin:0 auto;  width:100%; overflow:auto; min-height:50rem}
 		.headerWrapper	{ color:#fff; background-color: #00a7f7; padding:3.6rem 4.2rem 6rem; border-top: 2.4rem solid #0288d1; }
 		.contentWrapper	{ padding:2.4rem; }
-		.resultsWrapper	{ background-color:#fff; padding:0.8rem 2.4rem 0.8rem; margin:0 auto; box-shadow: 0 1px 2px 1px rgba(0,0,0,.2); max-width:144rem; }
+		.resultsWrapper	{ background-color:#fff; padding:0.8rem 2.4rem 0; margin:0 auto; box-shadow: 0 1px 2px 1px rgba(0,0,0,.2); max-width:144rem; }
 		
 		
 		/*  ============================================================================================ */
@@ -39,17 +39,34 @@
 		.toolbar .icon { font-size:1rem; }
 		
 		.icon { 
-			display: inline-block; 
+			display: inline-block;
 			margin:1.6rem 1.2rem 1.6rem;
 		}
 		
 		.icon:last-child { margin-right:0;}
+		
+		.ripple { 
+			display: inline-block;
+			padding:0.6rem;
+			margin:1rem 0.6rem;
+			border-radius:50%;
+			width:3.6rem;
+			height:3.6rem;
+			-moz-transition: all 0.1s linear;
+    		-webkit-transition: all 0.1s linear;
+   			transition: all 0.1s linear;
+		}
+
+		.ripple:hover { 
+			background:rgba(0,0,0,0.05);
+		}
 		
 		
 		/*  ============================================================================================ */
 		/*  BOX-CONTENT :BORDER-BOX ELEMENTS  ========================================================== */
 		/*  ============================================================================================ */
 
+		.icon,
 		input,
 		.resultsRow,
 		.simpleSearch,
@@ -67,8 +84,17 @@
 		.searchbarWrapper { 
 			background-color:#fff;
 			padding: 0.4rem 2.1rem 0.4rem 4.2rem;
-			box-shadow: 0 0 2px rgba(0,0,0,.2);
+			box-shadow: 0 0 0.2rem rgba(0,0,0,.2);
 			height:6.2rem;
+		}
+		
+		.searchbarWrapper.fixed { 
+			position:fixed;
+			top:0; 
+			left:0;
+			box-shadow: 0 0 1rem rgba(0,0,0,.5);
+    		width: 100%;
+
 		}
 		
 		.taSelect,
@@ -91,12 +117,10 @@
 		
 		.taSelect + span i { pointer-events:none; }
 		
-		.searchbarWrapper .icon:last-child i { 
-    		margin-top: -1rem;
-    		vertical-align: top; 
+		.simpleSearch { 
+			position:relative;
+			width:calc(100% - 16rem); 
 		}
-		
-		.simpleSearch { width:calc(100% - 16rem); }
 		
 		.searchbarWrapper input {
 			font-size: 1.8rem;
@@ -126,6 +150,22 @@
     		box-shadow: none;
 		}
 		
+		.close-icon {
+			position:absolute;
+			top: 0.5rem;
+			right:-3.2rem;
+			display: inline-block;
+			border:1px solid transparent;
+			background-color: transparent;
+			vertical-align: middle;
+		  	outline: 0;
+		  	cursor: pointer;
+		}
+		
+		.search-box:not(:valid) ~ .close-icon {
+			display: none;
+		}
+		
 		
 		/*  ============================================================================================ */
 		/*  PROPERTY SEARCH RESULTS ROWS  ============================================================== */
@@ -144,7 +184,15 @@
 			width:calc(100% + 4.8rem);
 		}
 		
-		.resultsRow:last-child { border-bottom:initial; }
+		.resultsRow:hover { 
+			background-color: #eee;
+			cursor:pointer;
+		}
+		
+		.resultsRow:last-child { 
+			padding-bottom:0.8rem; 
+			border-bottom:initial; 
+		}
 		
 		.sortRow { 
 			display:table;
@@ -155,6 +203,8 @@
 			height:4rem;
 			width:calc(100% + 2.4rem);
 		}
+		
+		.sortRow:hover { background-color: initial; }
 		
 		.colHeader {
 			display:table-cell;
