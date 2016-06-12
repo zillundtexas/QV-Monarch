@@ -11,7 +11,12 @@
 
 .icon > .material-icons.md-dark:hover,
 .icon > .material-icons.md-dark.md-inactive:hover,
-.icon > .material-icons.md-light:hover { color: rgba(0, 0, 0, 1); }
+.icon > .material-icons.md-light:hover { color: rgba(0, 0, 0, 0.87); }
+
+button.material-icons.md-dark:hover,
+button.material-icons.md-dark.md-inactive:hover,
+button.material-icons.md-light:hover { color: rgba(0, 0, 0, 0.87); }
+
 
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
