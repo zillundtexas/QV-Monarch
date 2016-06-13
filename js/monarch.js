@@ -6,12 +6,12 @@ $(document).ready(function () {
 
     $(".resultsRow").click(function(evt) {
         if ($(evt.target).closest('.closer').length == 0) {
-            $(this).addClass("openProp");
+            $(this).addClass("openProp mdl-shadow--2dp");
         }
     });
     
     $(".closer").click(function(evt){
-       $(evt.target).closest('.resultsRow').removeClass("openProp"); 
+       $(evt.target).closest('.resultsRow').removeClass("openProp mdl-shadow--2dp"); 
    });
    
 	$(".extrasWrapper").click(function(){
