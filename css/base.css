@@ -27,16 +27,18 @@ button.material-icons.md-light:hover { color: rgba(0, 0, 0, 0.87); }
 /*  ICON ANIMATION STYLES  ===================================================================== */
 /*  ============================================================================================ */
 
-.sorter {
+.sorter, h4 i {
     -moz-transition: all .2s linear;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
 }
 
-.sorter.down{
+.sorter.down, h4 i.down {
     -ms-transform:rotate(180deg);
     -moz-transform:rotate(180deg);
     -webkit-transform:rotate(180deg);
     transform:rotate(180deg);
 }
+
+
 

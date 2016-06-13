@@ -14,7 +14,7 @@
 		a:hover 	{ opacity:0.8; cursor:pointer; }
 		h1 			{ font-size:2rem; }
 		h2 			{ font-size:2.4rem; font-weight:300; }
-		input		{ font-family: 'Open Sans', 'Helvetica Neue', helvetica, helve, sans-serif; }
+		input		{ font-family:'Open Sans', 'Helvetica Neue', helvetica, helve, sans-serif; }
 		
 
 		/*  ============================================================================================ */
@@ -25,9 +25,9 @@
 		.lefty	{ float:left; }
 		
 		.pageWrapper 	{ margin:0 auto;  width:100%; overflow:auto; min-height:50rem}
-		.headerWrapper	{ color:#fff; background-color: #00a7f7; padding:3.6rem 4.2rem 6rem; border-top: 2.4rem solid #0288d1; }
+		.headerWrapper	{ color:#fff; background-color:#00a7f7; padding:3.6rem 4.2rem 6rem; border-top:2.4rem solid #0288d1; }
 		.contentWrapper	{ padding:2.4rem; }
-		.resultsWrapper	{ background-color:#fff; padding:0.8rem 2.4rem 0; margin:0 auto; box-shadow: 0 1px 2px 1px rgba(0,0,0,.2); max-width:144rem; }
+		.resultsWrapper	{ background-color:#f5f5f5; padding:0 2.4rem; margin:0 auto; box-shadow:0 1px 2px 1px rgba(0,0,0,.2); max-width:144rem; }
 		
 		
 		/*  ============================================================================================ */
@@ -39,22 +39,22 @@
 		.toolbar .icon { font-size:1rem; }
 		
 		.icon { 
-			display: inline-block;
+			display:inline-block;
 			margin:1.6rem 1.2rem 1.6rem;
 		}
 		
 		.icon:last-child { margin-right:0;}
 		
 		.ripple { 
-			display: inline-block;
+			display:inline-block;
 			padding:0.6rem;
 			margin:1rem 0.6rem;
 			border-radius:50%;
 			width:3.6rem;
 			height:3.6rem;
-			-moz-transition: all 0.1s linear;
-    		-webkit-transition: all 0.1s linear;
-   			transition: all 0.1s linear;
+			-moz-transition:all 0.1s linear;
+    		-webkit-transition:all 0.1s linear;
+   			transition:all 0.1s linear;
 		}
 
 		.ripple:hover { background:rgba(0,0,0,0.05); }
@@ -66,6 +66,12 @@
 
 		.icon,
 		input,
+		.openProp,
+		.openProp .capval,
+		.openProp .landval,
+		.openProp .tfa,
+		.openProp .tlamas,
+		.openProp .landarea,
 		.resultsRow,
 		.simpleSearch,
 		.searchbarWrapper,
@@ -81,9 +87,10 @@
 		
 		.searchbarWrapper { 
 			background-color:#fff;
-			padding: 0 2.4rem;
-			box-shadow: 0 0 0.2rem rgba(0,0,0,.2);
+			padding:0 2.4rem;
+			box-shadow:0 0 0.2rem rgba(0,0,0,0.2);
 			height:6.2rem;
+			z-index:10;
 		}
 		
 		form.searchBar {
@@ -96,9 +103,8 @@
 			position:fixed;
 			top:0; 
 			left:0;
-			box-shadow: 0 0 1rem rgba(0,0,0,.5);
-    		width: 100%;
-
+			box-shadow:0 0 1rem rgba(0,0,0,0.5);
+    		width:100%;
 		}
 		
 		.taSelect,
@@ -127,10 +133,10 @@
 		}
 		
 		.searchbarWrapper input {
-			font-size: 1.8rem;
+			font-size:1.8rem;
 			font-weight:400;
-			color: #434343;
-			padding: 0.8rem 0;
+			color:#434343;
+			padding:0.8rem 0;
 			border:none;
 			width:100%;
 			height:3.2rem;
@@ -145,29 +151,29 @@
 			border-radius:0;
 			width:6rem;
 			height:3.2rem;
-			-webkit-appearance: none;
+			-webkit-appearance:none;
 		}
 		
 		.searchbarWrapper input:focus,
 		.searchbarWrapper select:focus {
-    		outline: 0;
-    		box-shadow: none;
+    		outline:0;
+    		box-shadow:none;
 		}
 		
 		.close-icon {
 			position:absolute;
-			top: -1.1rem;
+			top:-1.1rem;
 			right:-3.2rem;
-			display: inline-block;
+			display:inline-block;
 			border:1px solid transparent;
-			background-color: transparent;
-			vertical-align: middle;
-		  	outline: 0;
-		  	cursor: pointer;
+			background-color:transparent;
+			vertical-align:middle;
+		  	outline:0;
+		  	cursor:pointer;
 		}
 		
 		.search-box:not(:valid) ~ .close-icon {
-			display: none;
+			display:none;
 		}
 		
 		
@@ -175,21 +181,30 @@
 		/*  PROPERTY SEARCH RESULTS ROWS  ============================================================== */
 		/*  ============================================================================================ */
 		
-		.resultsTitle { margin-bottom:1.6rem; overflow:auto; }
+		.resultsTitle { 
+			background-color:#fff;
+			padding:0.8rem 1.2rem 1.6rem 1.6rem;
+			margin:0 -2.4rem;
+			overflow:hidden;
+		}
 		
 		.resultsTitle h1 { margin-top:1.6rem; }
 				
 		.resultsRow { 
 			display:table;
+			background:#fff;
 			padding:0 2.4rem 0 0.8rem;
 			margin:0 -2.4rem;
 			border-bottom:1px solid #f2f2f2;
 			height:7.2rem;
 			width:calc(100% + 4.8rem);
+			-moz-transition:all .2s linear;
+    		-webkit-transition:all .2s linear;
+   			transition:all .2s linear;
 		}
 		
 		.resultsRow:hover { 
-			background-color: #eee;
+			background-color:#eee;
 			cursor:pointer;
 		}
 		
@@ -200,15 +215,16 @@
 		
 		.sortRow { 
 			display:table;
+			background-color:#fff;
 			box-shadow:none;
-			padding-right:0;
+			padding-right:2.4rem;
 			border-bottom:none;
 			margin:0 0 0 -2.4rem;
 			height:4rem;
-			width:calc(100% + 2.4rem);
+			width:calc(100% + 4.8rem);
 		}
 		
-		.sortRow:hover { background-color: initial; }
+		.sortRow:hover { background-color:#fff; }
 		
 		.colHeader {
 			display:table-cell;
@@ -232,7 +248,7 @@
 		
 		.colHeader.active > .icon { 
 			display:inline-block;
-    		vertical-align: middle;
+    		vertical-align:middle;
 		}
 		
 		.colHeader a { 
@@ -270,8 +286,14 @@
 		.primaryPhoto_thumb + span {
 			display:inline-block;
 			font-weight:600;
-			width: calc(100% - 6.7rem);
-    		vertical-align: middle;
+			width:calc(100% - 6.7rem);
+    		vertical-align:middle;
+		}
+		
+		.resultsRow .photoGallery_propSearch,
+		.resultsRow .toolbar,
+		.propDetails { 
+			display:none; 
 		}
 		
 		@media only screen and (max-width:900px) {
@@ -279,6 +301,199 @@
 			.colCell { font-size:1.1rem; }
 		
 		}
+		
+		
+		/*  ============================================================================================ */
+		/*  PROPERTY SEARCH RESULTS OPEN PROPERTY CARD  ================================================ */
+		/*  ============================================================================================ */
+		
+		.openProp {
+			display:block;
+			position:relative;
+			background-color:#fff;
+			padding:1.6rem;
+			border-bottom:none;
+			border-radius:2px;
+			margin:1rem 1rem 1.1rem -1.4rem;
+			box-shadow:0 1px 1px 0px rgba(0,0,0,0.2);
+			width:calc(100% + 2.8rem);
+			height:initial;
+			min-height:30rem;
+		}
+		
+		.openProp:hover { background-color:#fff; }
+		
+		.openProp::before,
+		.openProp::after {    
+			display:block;
+			position:absolute;
+			left:-1rem;
+			content:"";
+			border-top:1px solid #ddd;
+			width:calc(100% + 2rem);
+			height:1px;
+			z-index:3;
+		}
+		
+		.openProp::before { top:-1.1rem;  }
+		.openProp::after  { bottom:-1.2rem; }
+		
+		.openProp .toolbar { 
+			position:absolute;
+			top:0.3rem;
+			right:1.6rem;
+		}
+		
+		.openProp .address,
+		.openProp .valref,
+		.openProp .capval,
+		.openProp .landval,
+		.openProp .tfa,
+		.openProp .tlamas,
+		.openProp .landarea,
+		.openProp .category {
+			display:inline-block;
+			text-align:left;
+			width:initial;
+		}
+		
+		.openProp .capval,
+		.openProp .landval,
+		.openProp .tfa,
+		.openProp .tlamas,
+		.openProp .landarea {
+			position:absolute;
+			top:7rem;
+			left:0;
+			font-size:1.6rem;
+			line-height:2;
+			color:rgba(0,0,0,0.87);
+			border-bottom:1px solid rgba(0,0,0,0.14);
+			margin:0 1.6rem;
+			width:15%;
+		}
+		
+		.openProp .landval 	{ left:calc(15% + 3.2rem);  }
+		.openProp .tfa 		{ left:calc(30% + 6.4rem);  }
+		.openProp .tlamas 	{ left:calc(45% + 9.6rem);  }
+		.openProp .landarea { left:calc(60% + 12.8rem); }
+		
+		.openProp .capval::after,
+		.openProp .landval::after,
+		.openProp .tfa::after,
+		.openProp .tlamas::after,
+		.openProp .landarea::after {
+			position:absolute;
+			bottom:-2.5rem;
+			left:0;
+			font-size:1.2rem;
+			color:rgba(0,0,0,0.38);
+		}
+		
+		.openProp .capval::after 	{ content:"Capital value"; 	  }
+		.openProp .landval::after  	{ content:"Land value"; 	  }
+		.openProp .tfa::after 		{ content:"Total Floor area"; }
+		.openProp .tlamas::after  	{ content:"TLA MAS"; 		  }
+		.openProp .landarea::after  { content:"Land area"; 		  }
+		
+		.openProp .address span {
+			font-size:1.8rem;
+			font-weight:400;
+			color:#0288d1;
+			padding-right:1.6rem;
+			margin:0 0 12rem;
+			width:initial;
+		}
+		
+		.openProp .valref,
+		.openProp .category {
+			font-size:1.3rem;
+			font-weight:600;
+			color:#777;
+			line-height:2.4;
+			padding:0 1.6rem;
+			border-left:1px solid rgba(0,0,0,0.14);
+			vertical-align:top;
+		}
+		
+		.openProp .primaryPhoto_thumb { display:none; }
+		
+		.resultsRow.openProp .photoGallery_propSearch,
+		.resultsRow.openProp .toolbar { 
+			display:block; 
+		}
+		
+		.photoGallery_propSearch {
+			padding-bottom:0.8rem;
+			overflow:auto;
+			width:calc(100% - 3.2rem);
+			white-space:nowrap;
+		}
+		
+		.photoGallery_thumb {
+			display:inline-block;
+			background-color:rgba(0,0,0,0.30);
+			width:14rem;
+			height:10.5rem;
+		}
+
+		@media only screen and (max-width:900px) {
+			.openProp .capval,
+			.openProp .landval,
+			.openProp .tfa,
+			.openProp .tlamas,
+			.openProp .landarea {
+				font-size:1.5rem;
+			}
+			
+			.photoGallery_thumb {
+				display:inline-block;
+				background-color:rgba(0,0,0,0.30);
+				width:12rem;
+				height:9rem;
+			}
+		
+		}
+		
+		
+		/*  ============================================================================================ */
+		/*  PROPERTY CARD EXTRA DETAILS DRAWER  ======================================================== */
+		/*  ============================================================================================ */
+		
+		.openProp .propDetails {
+			display:block;
+			margin-top:0.8rem;
+		}
+		
+		.propDetails h4 {
+			font-size:1.3rem;
+			font-weight:600;
+			line-height:2.4;
+		}
+		
+		.propDetails h4 i {
+			display:inline-block;
+			margin:-0.4rem 0 0 0.2rem;
+    		vertical-align:middle;
+		}
+		
+		
+		.extras {
+			display:none;
+			background:#f9f9f9;
+			border-bottom-left-radius:2px;
+			border-bottom-right-radius:2px;
+			margin:0.8rem 0 -1.6rem -1.6rem;
+			box-shadow:inset 0px 2px 8px -5px rgba(0,0,0,0.5);
+			height:20rem;
+			width:calc(100% + 3.2em);
+		}
+
+
+		
+		
+		
+		
 		
 		
 /*  ==================================================================================================== */

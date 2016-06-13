@@ -1,9 +1,24 @@
 $(document).ready(function () {
 
-	$(".sorter").click(function(){
-		$(this).toggleClass("down"); 
-	});
+    $(".sorter").click(function(){
+        $(this).toggleClass("down"); 
+    });
 
+    $(".resultsRow").click(function(evt) {
+        if ($(evt.target).closest('.closer').length == 0) {
+            $(this).addClass("openProp");
+        }
+    });
+    
+    $(".closer").click(function(evt){
+       $(evt.target).closest('.resultsRow').removeClass("openProp"); 
+   });
+   
+	$(".propDetails").click(function(){
+		$(".extras").slideToggle();
+		$("i").toggleClass("down"); 
+	});
+	
 });
 
 $(window).scroll(function(){
@@ -13,3 +28,6 @@ $(window).scroll(function(){
   if (scroll >= 153) sticky.addClass('fixed');
   else sticky.removeClass('fixed');
 });
+
+
+
