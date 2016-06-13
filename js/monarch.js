@@ -14,7 +14,7 @@ $(document).ready(function () {
        $(evt.target).closest('.resultsRow').removeClass("openProp"); 
    });
    
-	$(".propDetails").click(function(){
+	$(".extrasWrapper").click(function(){
 		$(".extras").slideToggle();
 		$("i").toggleClass("down"); 
 	});

@@ -8,7 +8,7 @@
 		/*  ============================================================================================ */
 		
 		html		{ font-size:62.5% } /* Sets the base font size of the page to 10px */
-		body		{ font-family:'Open Sans', 'Helvetica Neue', helvetica, helve, sans-serif; color:rgba(0,0,0,.87); line-height:1.4; background:#f9f9f9; }
+		body		{ font-family:'Open Sans', 'Helvetica Neue', helvetica, helve, sans-serif; color:rgba(0,0,0,.87); line-height:1.4; background:#f9f9f9; padding-bottom:10rem; }
 		body		{ border-top:2rem solid red; }
 		a 			{ color:#039be5; text-decoration:none; }
 		a:hover 	{ opacity:0.8; cursor:pointer; }
@@ -129,7 +129,7 @@
 		
 		.simpleSearch { 
 			position:relative;
-			width:calc(100% - 16rem); 
+			width:calc(100% - 14rem); 
 		}
 		
 		.searchbarWrapper input {
@@ -292,7 +292,7 @@
 		
 		.resultsRow .photoGallery_propSearch,
 		.resultsRow .toolbar,
-		.propDetails { 
+		.extrasWrapper { 
 			display:none; 
 		}
 		
@@ -365,7 +365,7 @@
 			position:absolute;
 			top:7rem;
 			left:0;
-			font-size:1.6rem;
+			font-size:1.8rem;
 			line-height:2;
 			color:rgba(0,0,0,0.87);
 			border-bottom:1px solid rgba(0,0,0,0.14);
@@ -460,18 +460,18 @@
 		/*  PROPERTY CARD EXTRA DETAILS DRAWER  ======================================================== */
 		/*  ============================================================================================ */
 		
-		.openProp .propDetails {
+		.openProp .extrasWrapper {
 			display:block;
 			margin-top:0.8rem;
 		}
 		
-		.propDetails h4 {
+		.extrasWrapper h4 {
 			font-size:1.3rem;
 			font-weight:600;
 			line-height:2.4;
 		}
 		
-		.propDetails h4 i {
+		.extrasWrapper h4 i {
 			display:inline-block;
 			margin:-0.4rem 0 0 0.2rem;
     		vertical-align:middle;
