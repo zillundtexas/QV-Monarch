@@ -318,7 +318,7 @@
 			box-shadow:0 1px 1px 0px rgba(0,0,0,0.2);
 			width:calc(100% + 2.8rem);
 			height:initial;
-			min-height:30rem;
+			min-height:20rem;
 		}
 		
 		.openProp:hover { background-color:#fff; }
@@ -401,7 +401,7 @@
 			font-weight:400;
 			color:#0288d1;
 			padding-right:1.6rem;
-			margin:0 0 12rem;
+			margin:0 0 10rem;
 			width:initial;
 		}
 		
@@ -425,6 +425,7 @@
 		
 		.photoGallery_propSearch {
 			padding-bottom:0.8rem;
+			margin-top:2rem;
 			overflow:auto;
 			width:calc(100% - 3.2rem);
 			white-space:nowrap;
