@@ -11,33 +11,37 @@
 	<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'/>
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'/>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/reset.css" media="all"/>
-	<link rel="stylesheet" type="text/css" href="css/base.css" media="all"/>
-	<link rel="stylesheet" type="text/css" href="css/snapLarge.css" media="all"/>
-	<link rel="stylesheet" type="text/css" href="css/snapMedium.css" media="all"/>
-	<link rel="stylesheet" type="text/css" href="css/snapSmall.css" media="all"/>
-	<link rel="stylesheet" type="text/css" href="css/snapXSmall.css" media="all"/>
-	<link rel="stylesheet" type="text/css" href="css/snapCustom.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="./css/base.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="./css/snapLarge.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="./css/snapMedium.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="./css/snapSmall.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="./css/snapXSmall.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="./css/snapCustom.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="./css/dropzone.css" media="all"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="./js/material.js"></script>
+	<script src="./js/dropzone.js"></script>
+	<script src="./js/monarch.js"></script>
 </head>
 <body>
 	<div class="pageWrapper">
-		<div class="uploaderHeader">
-			<ul class="tabs">
-				<li><a class="active" href="#">Upload Photos</a></li>
-				<li><a href="#">My Photos</a></li>
-			</ul>
+		<div class="uploaderHeader mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  			<div class="mdl-tabs__tab-bar">
+      			<a href="#starks-panel" class="mdl-tabs__tab is-active">Upload Photos</a>
+      			<a href="#lannisters-panel" class="mdl-tabs__tab">My Photos</a>
+  			</div>
 		</div>
-		<div class="uploaderBody">
-			<h3>Drag a photo here<span>or</span></h3>
+		<div class="uploaderBody dragNdrop">
+			<form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
 		</div>
+      
 		<div class="uploaderFooter">
-			<ul class="buttonBar bottom">
-				<li class="lefty"><a class="button primary" href="#">Save</a></li>
-				<li class="lefty"><a class="button secondary" href="#">Cancel</a></li>
-			</ul>
+			<div class="buttonBar bottom">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" >Save</button>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Cancel</button>
+			</div>
 		</div>
 	</div>
-	<script src="js/monarch.js"></script>
 </body>
 </html>
