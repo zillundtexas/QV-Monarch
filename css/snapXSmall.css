@@ -18,7 +18,7 @@
 		
 		
 		/*  ============================================================================================ */
-		/*  BOX-CONTENT :BORDER-BOX ELEMENTS  ========================================================== */
+		/*  BOX-CONTENT : BORDER-BOX ELEMENTS  ========================================================= */
 		/*  ============================================================================================ */
 		
 		
@@ -31,10 +31,31 @@
 		/*  PROPERTY SEARCH RESULTS ROWS  ============================================================== */
 		/*  ============================================================================================ */
 		
+		.resultsTitle h1 { font-size: 1.4rem; }
 		
 		/*  ============================================================================================ */
 		/*  PROPERTY SEARCH RESULTS OPEN PROPERTY CARD  ================================================ */
 		/*  ============================================================================================ */
+		
+		.colCell.capval::after,
+		.colCell.landval::after,
+		.colCell.tfa::after,
+		.colCell.tlamas::after,
+		.colCell.landarea::after {
+			position:absolute;
+			top:3rem;
+			left:0;
+			font-size:1rem;
+			line-height:1;
+			color:rgba(0,0,0,0.38);
+			vertical-align:top;
+		}
+		
+		.colCell.capval::after 	 { content:"Capital value"; }
+		.colCell.landval::after  { content:"Land value"; }
+		.colCell.tfa::after 	 { content:"TFA"; }
+		.colCell.tlamas::after   { content:"TLA"; }
+		.colCell.landarea::after { content:"Land area"; }
 		
 		
 		/*  ============================================================================================ */

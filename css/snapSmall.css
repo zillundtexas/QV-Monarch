@@ -10,15 +10,20 @@
 		/*  ============================================================================================ */
 		
 		/*body	{ border-top:2rem solid green; }*/
+		h1 		{ font-size: 1.6rem; }
 		
 		
 		/*  ============================================================================================ */
-		/*  ICON STYLES  =============================================================================== */
+		/*  BASE STYLES  =============================================================================== */
 		/*  ============================================================================================ */
+		
+		.headerWrapper	{ padding:1.8rem 2.4rem 4rem; }
+		.contentWrapper { padding: 1.6rem 1.2rem; }
+		.resultsWrapper { background-color:initial; box-shadow:none; }
 		
 		
 		/*  ============================================================================================ */
-		/*  BOX-CONTENT :BORDER-BOX ELEMENTS  ========================================================== */
+		/*  BOX-CONTENT : BORDER-BOX ELEMENTS  ========================================================= */
 		/*  ============================================================================================ */
 		
 		
@@ -26,15 +31,186 @@
 		/*  PROPERTY SEARCH BAR STYLES  ================================================================ */
 		/*  ============================================================================================ */
 		
+		.searchbarWrapper select {
+			font-size: 1.3rem;
+			width: 5rem;
+		}
+		
+		.simpleSearch {
+			margin-left: 0.6rem;
+			width: calc(100% - 11rem);
+		}
+		
+		.searchbarWrapper input { font-size: 1.6rem; }
+		
+		
 		
 		/*  ============================================================================================ */
 		/*  PROPERTY SEARCH RESULTS ROWS  ============================================================== */
 		/*  ============================================================================================ */
 		
+		.resultsTitle {	
+			position: relative;
+			top: -1.6rem;
+			left: -1.2rem;
+			right: 0;
+			padding: 2.4rem 1.2rem 2.4rem 1.6rem;
+			border-bottom: 1px solid rgba(0,0,0,0.14);
+			margin-bottom: -1.6rem;
+			width: calc(100% + 7.2rem);
+		}
+
+		.resultsTitle h1 {
+			margin-top: 1rem;
+			width: 50%;
+		}
+		
+		.sortRow { display: none; }
+		
+		.resultsRow { 
+			position:relative;
+			margin:1rem -2.4rem;
+			min-height:14rem; 
+			box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.04), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.06);
+			-moz-transition:all .1s linear;
+    		-webkit-transition:all .1s linear;
+   			transition:all .1s linear;
+		}
+		
+		.resultsRow:hover {
+    		background-color: #fff;
+    		cursor: initial;
+		}
+		
+		.colCell.address,
+		.colCell.valref,
+		.colCell.capval,
+		.colCell.landval,
+		.colCell.tfa,
+		.colCell.tlamas,
+		.colCell.landarea,
+		.colCell.category {
+			display:inline-block;
+			text-align:left;
+			width:initial;
+		}
+		
+		.colCell.address { 
+			display:block;	
+			font-size:1.5rem;
+			line-height:1.9;
+			margin-top:0.8rem;
+		}
+		
+		.colCell.valref,
+		.colCell.category {
+			display:inline-block;
+			font-size:1.2rem;
+			font-weight: 600;
+    		color: #777;
+			line-height:1.6;
+			float:left;
+		}
+		
+		.colCell.address span,
+		.colCell.valref { margin-left:6.5rem;	}
+		
+		.colCell.valref { 
+			padding-right:0.8rem;
+			border-right:1px solid rgba(0,0,0,0.14);
+			margin-right:0.8rem;	
+		}
+		
+		.colCell.capval,
+		.colCell.landval,
+		.colCell.tfa,
+		.colCell.tlamas,
+		.colCell.landarea {
+			position:absolute;
+			top:7.5rem;
+			font-size:1.2rem;
+			font-weight:600;
+			line-height:2;
+			border-bottom:1px solid rgba(0,0,0,0.14);
+			width:calc(15% - 1rem);
+		}
+		
+		.colCell.capval 	{ left:1rem; width:calc(27.5% - 2rem); }
+		.colCell.landval 	{ left:27.5%; width:calc(27.5% - 2rem); }
+		.colCell.tfa 		{ left:calc(55% - 1rem); }
+		.colCell.tlamas 	{ left:calc(70% - 1rem); }
+		.colCell.landarea 	{ left:calc(85% - 1rem); width:15%; }
+		
+		.colCell.capval::after,
+		.colCell.landval::after,
+		.colCell.tfa::after,
+		.colCell.tlamas::after,
+		.colCell.landarea::after {
+			position:absolute;
+			bottom:-2.2rem;
+			left:0;
+			font-size:1rem;
+			color:rgba(0,0,0,0.38);
+		}
+		
+		.colCell.capval::after 	 { content:"Capital value"; }
+		.colCell.landval::after  { content:"Land value"; }
+		.colCell.tfa::after 	 { content:"TFA"; }
+		.colCell.tlamas::after   { content:"TLA"; }
+		.colCell.landarea::after { content:"Land area"; }
+		
+		.primaryPhoto_thumb { 
+			position:absolute;
+			vertical-align: top; 
+			width:5.2rem;
+			height:5.2rem;
+		}
+		
 		
 		/*  ============================================================================================ */
 		/*  PROPERTY SEARCH RESULTS OPEN PROPERTY CARD  ================================================ */
 		/*  ============================================================================================ */
+		
+		
+		.openProp {	width:calc(100% + 5rem); }
+		
+		.openProp::before, .openProp::after { display: none; }
+		
+		.openProp .toolbar { right: 0.6rem; }
+		
+		.openProp .address { line-height:1.2; margin:0 0 0.5rem;}
+		
+		.openProp .address span { margin:0 0 0; }
+		
+		.openProp .valref,
+		.openProp .category {
+			display:inline-block;
+			font-size:1.2rem;
+			line-height:1.6;
+			padding:0;
+			border-left:initial;
+			float:left;
+		}
+		
+		.openProp .valref {
+			padding-right:0.8rem;
+			margin-left:0;
+			margin-bottom:7.5rem;
+		}
+		
+		.openProp .capval 	{ left:0; width:calc(25% - 2rem); }
+		.openProp .landval 	{ left:calc(25% - 1rem); width:calc(25% - 2rem); }
+		.openProp .tfa 		{ left:calc(50% - 2rem); }
+		.openProp .tlamas 	{ left:calc(66% - 2rem); }
+		.openProp .landarea { left:calc(82% - 2rem); width:15%; }
+		
+		.photoGallery_propSearch { width: 100%; }
+		
+		.openProp .extrasWrapper { margin-top: 0; }
+		
+		.extrasWrapper h4 { font-size: 1.2rem; }
+		
+
 		
 		
 		/*  ============================================================================================ */

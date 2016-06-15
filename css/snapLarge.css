@@ -33,7 +33,7 @@
 		
 			
 		/*  ============================================================================================ */
-		/*  BOX-CONTENT :BORDER-BOX ELEMENTS  ========================================================== */
+		/*  BOX-CONTENT : BORDER-BOX ELEMENTS  ========================================================= */
 		/*  ============================================================================================ */
 
 		.icon,
@@ -58,6 +58,7 @@
 		/*  ============================================================================================ */
 		
 		.searchbarWrapper { 
+			position:relative;
 			background-color:#fff;
 			padding:0 2.4rem;
 			height:6.2rem;
@@ -165,9 +166,9 @@
 			border-bottom:1px solid #f2f2f2;
 			height:7.2rem;
 			width:calc(100% + 4.8rem);
-			-moz-transition:all .2s linear;
-    		-webkit-transition:all .2s linear;
-   			transition:all .2s linear;
+			-moz-transition:all .1s linear;
+    		-webkit-transition:all .1s linear;
+   			transition:all .1s linear;
 		}
 		
 		.resultsRow:hover { 
@@ -362,7 +363,7 @@
 		.openProp .capval::after 	{ content:"Capital value"; 	  }
 		.openProp .landval::after  	{ content:"Land value"; 	  }
 		.openProp .tfa::after 		{ content:"Total Floor area"; }
-		.openProp .tlamas::after  	{ content:"TLA MAS"; 		  }
+		.openProp .tlamas::after  	{ content:"TLA"; 		  }
 		.openProp .landarea::after  { content:"Land area"; 		  }
 		
 		.openProp .address span {
